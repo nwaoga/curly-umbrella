@@ -1,0 +1,10 @@
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\bin\Debug\MashApp.exe.config
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\bin\Debug\MashApp.exe
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\bin\Debug\MashApp.pdb
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\obj\Debug\MashApp.csprojResolveAssemblyReference.cache
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\obj\Debug\MashApp.Form1.resources
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\obj\Debug\MashApp.Properties.Resources.resources
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\obj\Debug\MashApp.csproj.GenerateResource.Cache
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\obj\Debug\MashApp.exe
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\obj\Debug\MashApp.pdb
+c:\users\en\documents\visual studio 2013\Projects\MashApp\MashApp\obj\Debug\MashApp.Agency1.resources

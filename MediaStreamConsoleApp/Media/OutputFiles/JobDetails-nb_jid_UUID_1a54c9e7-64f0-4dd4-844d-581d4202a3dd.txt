@@ -1,0 +1,5 @@
+
+Job ID: nb:jid:UUID:1a54c9e7-64f0-4dd4-844d-581d4202a3dd
+Job Name: H264 Adaptive Bitrate MP4 Set 720p encoding job
+Job submitted (client UTC time): 18/05/2016 10:29:48
+Media Services account name: nwaoga
