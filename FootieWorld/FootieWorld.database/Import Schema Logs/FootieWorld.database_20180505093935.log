@@ -1,0 +1,77 @@
+05/05/2018 22:39:35	This log contains information about the import schema operation into project 'FootieWorld.database' on computer 'DALMATION' by user 'EN'.
+05/05/2018 22:39:35	Import of database schema has started.
+05/05/2018 22:39:40	Gathering database options
+05/05/2018 22:39:40	Gathering users
+05/05/2018 22:39:40	Gathering roles
+05/05/2018 22:39:40	Gathering application roles
+05/05/2018 22:39:40	Gathering role memberships
+05/05/2018 22:39:40	Gathering filegroups
+05/05/2018 22:39:40	Gathering full-text catalogs
+05/05/2018 22:39:40	Gathering assemblies
+05/05/2018 22:39:40	Gathering certificates
+05/05/2018 22:39:40	Gathering asymmetric keys
+05/05/2018 22:39:40	Gathering symmetric keys
+05/05/2018 22:39:40	Gathering encrypted symmetric keys
+05/05/2018 22:39:40	Gathering schemas
+05/05/2018 22:39:41	Gathering XML schema collections
+05/05/2018 22:39:41	Gathering user-defined data types
+05/05/2018 22:39:41	Gathering user-defined types
+05/05/2018 22:39:41	Gathering table types
+05/05/2018 22:39:41	Gathering unique keys for table types
+05/05/2018 22:39:41	Gathering primary keys for table types
+05/05/2018 22:39:41	Gathering indexes for table types
+05/05/2018 22:39:41	Gathering check constraints for table types
+05/05/2018 22:39:41	Gathering default constraints for table types
+05/05/2018 22:39:41	Gathering partition functions
+05/05/2018 22:39:41	Gathering partition schemes
+05/05/2018 22:39:41	Gathering functions
+05/05/2018 22:39:41	Gathering encrypted functions
+05/05/2018 22:39:41	Gathering aggregates
+05/05/2018 22:39:41	Gathering procedures
+05/05/2018 22:39:41	Gathering encrypted procedures
+05/05/2018 22:39:41	Gathering tables
+05/05/2018 22:39:41	Gathering primary keys
+05/05/2018 22:39:41	Gathering unique constraints
+05/05/2018 22:39:41	Gathering foreign keys
+05/05/2018 22:39:41	Gathering default constraints
+05/05/2018 22:39:41	Gathering check constraints
+05/05/2018 22:39:41	Gathering views
+05/05/2018 22:39:41	Gathering encrypted views
+05/05/2018 22:39:41	Gathering indexes
+05/05/2018 22:39:41	Gathering statistics
+05/05/2018 22:39:41	Gathering full-text index stoplists
+05/05/2018 22:39:41	Gathering search property lists
+05/05/2018 22:39:41	Gathering search properties
+05/05/2018 22:39:41	Gathering full-text indexes
+05/05/2018 22:39:41	Gathering column store indexes
+05/05/2018 22:39:41	Gathering spatial indexes
+05/05/2018 22:39:41	Gathering XML indexes
+05/05/2018 22:39:41	Gathering Selective XML indexes
+05/05/2018 22:39:41	Gathering encrypted triggers
+05/05/2018 22:39:41	Gathering triggers
+05/05/2018 22:39:41	Gathering encrypted and clr ddl triggers
+05/05/2018 22:39:41	Gathering ddl triggers
+05/05/2018 22:39:41	Gathering synonyms
+05/05/2018 22:39:41	Gathering defaults
+05/05/2018 22:39:41	Gathering data constraint uddt bindings
+05/05/2018 22:39:41	Gathering rules
+05/05/2018 22:39:41	Gathering data constraint uddt bindings
+05/05/2018 22:39:41	Gathering message types
+05/05/2018 22:39:41	Gathering queues
+05/05/2018 22:39:41	Gathering contracts
+05/05/2018 22:39:41	Gathering services
+05/05/2018 22:39:41	Gathering event notifications
+05/05/2018 22:39:41	Gathering remote service bindings
+05/05/2018 22:39:41	Gathering broker priorities
+05/05/2018 22:39:41	Gathering signatures
+05/05/2018 22:39:41	Gathering data compression options
+05/05/2018 22:39:41	Gathering sequence types
+05/05/2018 22:39:41	Gathering extended properties
+05/05/2018 22:39:41	Gathering credentials
+05/05/2018 22:39:41	Gathering logins
+05/05/2018 22:39:41	Gathering server audits
+05/05/2018 22:39:42	Scanning project for duplicate elements
+05/05/2018 22:39:42	Finished duplicate element processing
+05/05/2018 22:39:42	Finished importing database.
+05/05/2018 22:39:42	A summary of the import was saved to the following location: C:\Users\en\Documents\GitHub\curly-umbrella\FootieWorld\FootieWorld.database\Import Schema Logs\FootieWorld.database_20180505093935.log
+05/05/2018 22:39:42	Click Finish to continue...
