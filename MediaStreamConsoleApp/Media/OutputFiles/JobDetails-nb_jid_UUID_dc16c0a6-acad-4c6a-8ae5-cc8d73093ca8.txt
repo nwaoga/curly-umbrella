@@ -1,5 +1,0 @@
-
-Job ID: nb:jid:UUID:dc16c0a6-acad-4c6a-8ae5-cc8d73093ca8
-Job Name: AAC Good Quality Audio encoding job
-Job submitted (client UTC time): 23/05/2016 08:11:52
-Media Services account name: nwaoga

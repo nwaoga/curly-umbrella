@@ -1,5 +1,0 @@
-
-Job ID: nb:jid:UUID:122d210d-0926-49a1-b15b-00e0b3ef588a
-Job Name: H264 Broadband 720p encoding job
-Job submitted (client UTC time): 17/05/2016 15:37:07
-Media Services account name: nwaoga
