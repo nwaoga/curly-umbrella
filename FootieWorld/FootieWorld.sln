@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FootieWorld.database", "FootieWorld.database\FootieWorld.database.sqlproj", "{0C1D3333-2901-4C08-BA4D-5D5890FD91E6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C1D3333-2901-4C08-BA4D-5D5890FD91E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1D3333-2901-4C08-BA4D-5D5890FD91E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1D3333-2901-4C08-BA4D-5D5890FD91E6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0C1D3333-2901-4C08-BA4D-5D5890FD91E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1D3333-2901-4C08-BA4D-5D5890FD91E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1D3333-2901-4C08-BA4D-5D5890FD91E6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
