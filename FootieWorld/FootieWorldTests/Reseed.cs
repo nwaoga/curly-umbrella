@@ -12,15 +12,22 @@ using LoremNET;
 namespace FootieWorldTests
 {
     [TestClass]
-    public class UnitTest1 : Testbase
+    public class Reseed : Testbase
     {
-        [TestMethod]
-        [Ignore]
-        public void TestMethod1()
+
+        [TestInitialize]
+        public void Initialize()
         {
-                       
         }
 
         
+        [TestMethod]
+        [Ignore]
+        public void ReseedDb()
+        {
+            this.reseedDb();
+        }
+
+
     }
 }

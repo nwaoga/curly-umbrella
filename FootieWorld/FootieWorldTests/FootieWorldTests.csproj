@@ -117,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Testbase.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Reseed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
