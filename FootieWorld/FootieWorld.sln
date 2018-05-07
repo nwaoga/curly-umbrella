@@ -7,6 +7,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FootieWorld.database", "Foo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootieWorld.data.ef", "FootieWorld.data.ef\FootieWorld.data.ef.csproj", "{CA68E03E-5C47-4CBC-88EE-2C0CE4F0D9E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootieWorldTests", "FootieWorldTests\FootieWorldTests.csproj", "{6A22570E-21F7-4F04-A3D9-74A2E3F6761A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{CA68E03E-5C47-4CBC-88EE-2C0CE4F0D9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA68E03E-5C47-4CBC-88EE-2C0CE4F0D9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA68E03E-5C47-4CBC-88EE-2C0CE4F0D9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A22570E-21F7-4F04-A3D9-74A2E3F6761A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A22570E-21F7-4F04-A3D9-74A2E3F6761A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A22570E-21F7-4F04-A3D9-74A2E3F6761A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A22570E-21F7-4F04-A3D9-74A2E3F6761A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

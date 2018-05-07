@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FootieDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStadium">
+    <Key>
+      <PropertyRef Name="StadiumID" />
+    </Key>
+    <Property Name="StadiumID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Capacity" Type="Int32" />
+    <NavigationProperty Name="tblTeams" Relationship="Self.FK_tblTeam_ToStadium" FromRole="tblStadium" ToRole="tblTeam" />
+  </EntityType>
+  <EntityType Name="tblTeam">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NickName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Postcode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Colours" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StadiumID" Type="Guid" />
+    <NavigationProperty Name="tblStadium" Relationship="Self.FK_tblTeam_ToStadium" FromRole="tblTeam" ToRole="tblStadium" />
+  </EntityType>
+  <Association Name="FK_tblTeam_ToStadium">
+    <End Role="tblStadium" Type="Self.tblStadium" Multiplicity="0..1" />
+    <End Role="tblTeam" Type="Self.tblTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStadium">
+        <PropertyRef Name="StadiumID" />
+      </Principal>
+      <Dependent Role="tblTeam">
+        <PropertyRef Name="StadiumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FootieDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
+    <EntitySet Name="tblStadiums" EntityType="Self.tblStadium" />
+    <EntitySet Name="tblTeams" EntityType="Self.tblTeam" />
+    <AssociationSet Name="FK_tblTeam_ToStadium" Association="Self.FK_tblTeam_ToStadium">
+      <End Role="tblStadium" EntitySet="tblStadiums" />
+      <End Role="tblTeam" EntitySet="tblTeams" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

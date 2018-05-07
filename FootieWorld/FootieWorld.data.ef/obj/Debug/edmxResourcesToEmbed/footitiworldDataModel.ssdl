@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FootieDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStadium">
+    <Key>
+      <PropertyRef Name="StadiumID" />
+    </Key>
+    <Property Name="StadiumID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Address1" Type="varchar" MaxLength="255" />
+    <Property Name="Address2" Type="varchar" MaxLength="255" />
+    <Property Name="Address3" Type="varchar" MaxLength="255" />
+    <Property Name="Address4" Type="varchar" MaxLength="255" />
+    <Property Name="Capacity" Type="int" />
+  </EntityType>
+  <EntityType Name="tblTeam">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="NickName" Type="varchar" MaxLength="255" />
+    <Property Name="Address1" Type="varchar" MaxLength="255" />
+    <Property Name="Address2" Type="varchar" MaxLength="255" />
+    <Property Name="Address3" Type="varchar" MaxLength="255" />
+    <Property Name="Address4" Type="varchar" MaxLength="255" />
+    <Property Name="Postcode" Type="varchar" MaxLength="255" />
+    <Property Name="Colours" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="255" />
+    <Property Name="Website" Type="varchar" MaxLength="255" />
+    <Property Name="StadiumID" Type="uniqueidentifier" />
+  </EntityType>
+  <Association Name="FK_tblTeam_ToStadium">
+    <End Role="tblStadium" Type="Self.tblStadium" Multiplicity="0..1" />
+    <End Role="tblTeam" Type="Self.tblTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStadium">
+        <PropertyRef Name="StadiumID" />
+      </Principal>
+      <Dependent Role="tblTeam">
+        <PropertyRef Name="StadiumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FootieDbModelStoreContainer">
+    <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStadium" EntityType="Self.tblStadium" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTeam" EntityType="Self.tblTeam" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tblTeam_ToStadium" Association="Self.FK_tblTeam_ToStadium">
+      <End Role="tblStadium" EntitySet="tblStadium" />
+      <End Role="tblTeam" EntitySet="tblTeam" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

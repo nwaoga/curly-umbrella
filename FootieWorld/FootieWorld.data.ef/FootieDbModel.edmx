@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FootieDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblStadium">
+          <Key>
+            <PropertyRef Name="StadiumID" />
+          </Key>
+          <Property Name="StadiumID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Address1" Type="varchar" MaxLength="255" />
+          <Property Name="Address2" Type="varchar" MaxLength="255" />
+          <Property Name="Address3" Type="varchar" MaxLength="255" />
+          <Property Name="Address4" Type="varchar" MaxLength="255" />
+          <Property Name="Capacity" Type="int" />
+        </EntityType>
+        <EntityType Name="tblTeam">
+          <Key>
+            <PropertyRef Name="TeamId" />
+          </Key>
+          <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="NickName" Type="varchar" MaxLength="255" />
+          <Property Name="Address1" Type="varchar" MaxLength="255" />
+          <Property Name="Address2" Type="varchar" MaxLength="255" />
+          <Property Name="Address3" Type="varchar" MaxLength="255" />
+          <Property Name="Address4" Type="varchar" MaxLength="255" />
+          <Property Name="Postcode" Type="varchar" MaxLength="255" />
+          <Property Name="Colours" Type="varchar" MaxLength="255" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="255" />
+          <Property Name="Website" Type="varchar" MaxLength="255" />
+          <Property Name="StadiumID" Type="uniqueidentifier" />
+        </EntityType>
+        <Association Name="FK_tblTeam_ToStadium">
+          <End Role="tblStadium" Type="Self.tblStadium" Multiplicity="0..1" />
+          <End Role="tblTeam" Type="Self.tblTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStadium">
+              <PropertyRef Name="StadiumID" />
+            </Principal>
+            <Dependent Role="tblTeam">
+              <PropertyRef Name="StadiumID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FootieDbModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStadium" EntityType="Self.tblStadium" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTeam" EntityType="Self.tblTeam" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblTeam_ToStadium" Association="Self.FK_tblTeam_ToStadium">
+            <End Role="tblStadium" EntitySet="tblStadium" />
+            <End Role="tblTeam" EntitySet="tblTeam" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FootieDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblStadium">
+          <Key>
+            <PropertyRef Name="StadiumID" />
+          </Key>
+          <Property Name="StadiumID" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Capacity" Type="Int32" />
+          <NavigationProperty Name="tblTeams" Relationship="Self.FK_tblTeam_ToStadium" FromRole="tblStadium" ToRole="tblTeam" />
+        </EntityType>
+        <EntityType Name="tblTeam">
+          <Key>
+            <PropertyRef Name="TeamId" />
+          </Key>
+          <Property Name="TeamId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NickName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Postcode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Colours" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="StadiumID" Type="Guid" />
+          <NavigationProperty Name="tblStadium" Relationship="Self.FK_tblTeam_ToStadium" FromRole="tblTeam" ToRole="tblStadium" />
+        </EntityType>
+        <Association Name="FK_tblTeam_ToStadium">
+          <End Role="tblStadium" Type="Self.tblStadium" Multiplicity="0..1" />
+          <End Role="tblTeam" Type="Self.tblTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStadium">
+              <PropertyRef Name="StadiumID" />
+            </Principal>
+            <Dependent Role="tblTeam">
+              <PropertyRef Name="StadiumID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FootieDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
+          <EntitySet Name="tblStadiums" EntityType="Self.tblStadium" />
+          <EntitySet Name="tblTeams" EntityType="Self.tblTeam" />
+          <AssociationSet Name="FK_tblTeam_ToStadium" Association="Self.FK_tblTeam_ToStadium">
+            <End Role="tblStadium" EntitySet="tblStadiums" />
+            <End Role="tblTeam" EntitySet="tblTeams" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FootieDbModelStoreContainer" CdmEntityContainer="FootieDbEntities">
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="FootieDbModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStadiums">
+            <EntityTypeMapping TypeName="FootieDbModel.tblStadium">
+              <MappingFragment StoreEntitySet="tblStadium">
+                <ScalarProperty Name="StadiumID" ColumnName="StadiumID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address4" ColumnName="Address4" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTeams">
+            <EntityTypeMapping TypeName="FootieDbModel.tblTeam">
+              <MappingFragment StoreEntitySet="tblTeam">
+                <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address4" ColumnName="Address4" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="Colours" ColumnName="Colours" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="StadiumID" ColumnName="StadiumID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
