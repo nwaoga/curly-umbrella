@@ -13,10 +13,10 @@ namespace FootieWorld.data.ef
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FootieDbEntities : DbContext
+    public partial class FootieDbEntities1 : DbContext
     {
-        public FootieDbEntities()
-            : base("name=FootieDbEntities")
+        public FootieDbEntities1()
+            : base("name=FootieDbEntities1")
         {
         }
     

@@ -115,7 +115,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FootieDbEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FootieDbEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
           <EntitySet Name="tblStadiums" EntityType="Self.tblStadium" />
           <EntitySet Name="tblTeams" EntityType="Self.tblTeam" />
@@ -129,7 +129,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FootieDbModelStoreContainer" CdmEntityContainer="FootieDbEntities">
+        <EntityContainerMapping StorageEntityContainer="FootieDbModelStoreContainer" CdmEntityContainer="FootieDbEntities1">
           <EntitySetMapping Name="C__RefactorLog">
             <EntityTypeMapping TypeName="FootieDbModel.C__RefactorLog">
               <MappingFragment StoreEntitySet="__RefactorLog">

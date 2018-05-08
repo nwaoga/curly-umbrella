@@ -1,2 +1,3 @@
-﻿CREATE USER [FootieDbUser] FOR LOGIN [FootieDbUser];
+﻿
+CREATE USER [FootieDbUser] Without LOGIN
 

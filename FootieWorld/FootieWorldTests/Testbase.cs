@@ -6,7 +6,7 @@ namespace FootieWorldTests
 {
     public class Testbase
     {
-      public FootieDbEntities FootieDatabase { get; set; }
+      public FootieDbEntities1 FootieDatabase { get; set; }
 
 
      public Testbase()
