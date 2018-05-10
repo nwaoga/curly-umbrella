@@ -25,7 +25,6 @@ namespace FootieWorld.data.ef
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__RefactorLog> C__RefactorLog { get; set; }
         public virtual DbSet<tblStadium> tblStadiums { get; set; }
         public virtual DbSet<tblTeam> tblTeams { get; set; }
     }

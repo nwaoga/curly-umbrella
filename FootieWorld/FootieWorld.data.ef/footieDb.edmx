@@ -5,12 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="FootieDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="__RefactorLog">
-          <Key>
-            <PropertyRef Name="OperationKey" />
-          </Key>
-          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
-        </EntityType>
         <EntityType Name="tblStadium">
           <Key>
             <PropertyRef Name="StadiumID" />
@@ -53,7 +47,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="FootieDbModelStoreContainer">
-          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblStadium" EntityType="Self.tblStadium" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblTeam" EntityType="Self.tblTeam" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_tblTeam_ToStadium" Association="Self.FK_tblTeam_ToStadium">
@@ -66,12 +59,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FootieDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="C__RefactorLog">
-          <Key>
-            <PropertyRef Name="OperationKey" />
-          </Key>
-          <Property Name="OperationKey" Type="Guid" Nullable="false" />
-        </EntityType>
         <EntityType Name="tblStadium">
           <Key>
             <PropertyRef Name="StadiumID" />
@@ -116,7 +103,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="FootieDbEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
           <EntitySet Name="tblStadiums" EntityType="Self.tblStadium" />
           <EntitySet Name="tblTeams" EntityType="Self.tblTeam" />
           <AssociationSet Name="FK_tblTeam_ToStadium" Association="Self.FK_tblTeam_ToStadium">
@@ -130,13 +116,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="FootieDbModelStoreContainer" CdmEntityContainer="FootieDbEntities">
-          <EntitySetMapping Name="C__RefactorLog">
-            <EntityTypeMapping TypeName="FootieDbModel.C__RefactorLog">
-              <MappingFragment StoreEntitySet="__RefactorLog">
-                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblStadiums">
             <EntityTypeMapping TypeName="FootieDbModel.tblStadium">
               <MappingFragment StoreEntitySet="tblStadium">

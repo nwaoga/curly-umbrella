@@ -49,40 +49,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C__RefactorLog.cs">
-      <DependentUpon>FootieDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FootieDbModel.Context.cs">
+    <Compile Include="footieDb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FootieDbModel.Context.tt</DependentUpon>
+      <DependentUpon>footieDb.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="FootieDbModel.cs">
+    <Compile Include="footieDb.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FootieDbModel.tt</DependentUpon>
+      <DependentUpon>footieDb.tt</DependentUpon>
     </Compile>
-    <Compile Include="FootieDbModel.Designer.cs">
+    <Compile Include="footieDb.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FootieDbModel.edmx</DependentUpon>
+      <DependentUpon>footieDb.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tblStadium.cs">
-      <DependentUpon>FootieDbModel.tt</DependentUpon>
+      <DependentUpon>footieDb.tt</DependentUpon>
     </Compile>
     <Compile Include="tblTeam.cs">
-      <DependentUpon>FootieDbModel.tt</DependentUpon>
+      <DependentUpon>footieDb.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="FootieDbModel.edmx">
+    <EntityDeploy Include="footieDb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FootieDbModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>footieDb.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="FootieDbModel.edmx.diagram">
-      <DependentUpon>FootieDbModel.edmx</DependentUpon>
+    <None Include="footieDb.edmx.diagram">
+      <DependentUpon>footieDb.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -90,15 +87,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FootieDbModel.Context.tt">
+    <Content Include="footieDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FootieDbModel.edmx</DependentUpon>
-      <LastGenOutput>FootieDbModel.Context.cs</LastGenOutput>
+      <DependentUpon>footieDb.edmx</DependentUpon>
+      <LastGenOutput>footieDb.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="FootieDbModel.tt">
+    <Content Include="footieDb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FootieDbModel.edmx</DependentUpon>
-      <LastGenOutput>FootieDbModel.cs</LastGenOutput>
+      <DependentUpon>footieDb.edmx</DependentUpon>
+      <LastGenOutput>footieDb.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
