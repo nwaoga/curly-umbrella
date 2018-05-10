@@ -71,6 +71,8 @@
     <Compile Include="tblTeam.cs">
       <DependentUpon>footieDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,18 +5,32 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Footieworld.core;
+using Footieworld.core.Models;
+using Footieworld.core.Services.Interfaces;
 using FootieWorld.data.ef;
 
 namespace FootieWorldApi.Controllers
 {
     public class StadiumController : ApiController
     {
-        // GET api/stadium
-        public IEnumerable<string> Get()
+        private IStadiumService _stadiumService;
+
+        public StadiumController (IStadiumService stadiumService )
         {
-            var db = new FootieDbEntities();
-            var stadiums = db.tblTeams.Select(o => o.Name).ToList();
-            return stadiums;
+            _stadiumService = stadiumService;
+        }
+
+
+        // GET api/stadium
+        public List<Stadium> Get()
+        {
+            //oldway
+            //var db = new FootieDbEntities();
+            //var stadiums = db.tblTeams.Select(o => o.Name).ToList();
+            //return stadiums;
+
+
+            return _stadiumService.GetAllStadiums();
         }
 
         // GET api/values/5
