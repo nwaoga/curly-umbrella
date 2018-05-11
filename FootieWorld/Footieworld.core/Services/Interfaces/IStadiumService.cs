@@ -10,7 +10,7 @@ namespace Footieworld.core.Services.Interfaces
 {
     public interface IStadiumService
     {
-        List<Stadium> GetAllStadiums();
+        List<String> GetAllStadiums();
    
     }
 }
