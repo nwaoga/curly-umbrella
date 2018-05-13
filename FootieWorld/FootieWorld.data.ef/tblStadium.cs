@@ -27,6 +27,7 @@ namespace FootieWorld.data.ef
         public string Address3 { get; set; }
         public string Address4 { get; set; }
         public Nullable<int> Capacity { get; set; }
+        public string Postcode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblTeam> tblTeams { get; set; }

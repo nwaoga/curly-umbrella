@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FootieDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FootieDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblStadium">
           <Key>
             <PropertyRef Name="StadiumID" />
@@ -16,6 +16,7 @@
           <Property Name="Address3" Type="varchar" MaxLength="255" />
           <Property Name="Address4" Type="varchar" MaxLength="255" />
           <Property Name="Capacity" Type="int" />
+          <Property Name="Postcode" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="tblTeam">
           <Key>
@@ -54,8 +55,7 @@
             <End Role="tblTeam" EntitySet="tblTeam" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FootieDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -71,6 +71,7 @@
           <Property Name="Address4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Capacity" Type="Int32" />
           <NavigationProperty Name="tblTeams" Relationship="Self.FK_tblTeam_ToStadium" FromRole="tblStadium" ToRole="tblTeam" />
+          <Property Name="Postcode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="tblTeam">
           <Key>
@@ -119,6 +120,7 @@
           <EntitySetMapping Name="tblStadiums">
             <EntityTypeMapping TypeName="FootieDbModel.tblStadium">
               <MappingFragment StoreEntitySet="tblStadium">
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
                 <ScalarProperty Name="StadiumID" ColumnName="StadiumID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Address1" ColumnName="Address1" />

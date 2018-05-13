@@ -6,5 +6,6 @@
     [Address2] VARCHAR(255) NULL, 
     [Address3] VARCHAR(255) NULL, 
     [Address4] VARCHAR(255) NULL, 
-    [Capacity] INT NULL 
+    [Capacity] INT NULL, 
+    [Postcode] NCHAR(10) NULL 
 )
