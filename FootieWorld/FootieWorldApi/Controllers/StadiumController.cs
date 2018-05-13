@@ -22,7 +22,7 @@ namespace FootieWorldApi.Controllers
 
 
         // GET api/stadium
-        public List<Stadium> Get()
+        public List<string> Get()
         {
             //oldway
             //var db = new FootieDbEntities();

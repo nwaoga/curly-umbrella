@@ -17,13 +17,13 @@ namespace Footieworld.core.Services
             _unitOfWork = unitOfWork;
         }
 
-        public List<Stadium> GetAllStadiums()
+        public List<string> GetAllStadiums()
         {
             var stadia = _unitOfWork.Context.tblStadiums.ToList();
-            var list = new List<Stadium>();
+            var list = new List<string>();
             foreach (var stadium in stadia)
             {
-                list.Add((Stadium)stadium);
+                list.Add(stadium.Name);
             }
             return list;
    
